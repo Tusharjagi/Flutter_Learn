@@ -14,17 +14,32 @@ class Home extends StatelessWidget{
         centerTitle: true,
         backgroundColor: Colors.teal[300],
       ),
-      body: const Center(
-        child: Text(
-          'Hello Tango !',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.black54,
-            fontFamily: 'IndieFlower',
+      body: Column (
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Row(
+            children: const <Widget>[
+              Text('Hello '),
+              Text('world '),
+            ],
           ),
-        ),
+          Container(
+            padding: const EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: const Text('One'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(30.0),
+            color: Colors.amber,
+            child: const Text('Two'),
+          ),
+          Container(
+            padding: const EdgeInsets.all(40.0),
+            color: Colors.red,
+            child: const Text('three'),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton (
         backgroundColor: Colors.teal[300],
